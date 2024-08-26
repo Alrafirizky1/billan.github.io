@@ -73,9 +73,26 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
   -webkit-transition: -webkit-transform 0.3s;
-
+  transition: transform 0.3s;
 }
+
+@media (max-width: 768px) {
+  .dalemnya_halaman {
+    height: auto; /* Biarkan tinggi elemen menyesuaikan dengan konten */
+    padding: 15px; /* Sesuaikan padding pada layar tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .dalemnya_halaman {
+    height: auto; /* Biarkan tinggi elemen menyesuaikan dengan konten */
+    padding: 10px; /* Sesuaikan padding pada layar ponsel */
+  }
+}
+
 
 section .gambar {
   max-width: 100%; /* Maksimum lebar gambar tidak akan melebihi lebar kontainer */
@@ -107,6 +124,20 @@ section.halaman1 {
 .halaman1 .ucapan1 {
   width: 100%;
   text-align: center;
+  padding: 10px; /* Tambahkan padding untuk memastikan konten tidak menempel di tepi layar */
+  box-sizing: border-box; /* Memastikan padding termasuk dalam ukuran elemen */
+}
+@media (max-width: 768px) {
+  .halaman1 .ucapan1 {
+    font-size: 1.2rem; /* Sesuaikan ukuran font pada layar tablet */
+    padding: 8px; /* Kurangi padding pada layar yang lebih kecil */
+  }
+}
+@media (max-width: 480px) {
+  .halaman1 .ucapan1 {
+    font-size: 1rem; /* Sesuaikan ukuran font pada layar ponsel */
+    padding: 5px; /* Kurangi padding lebih lanjut pada layar yang lebih kecil */
+  }
 }
 
 .halaman1 .isiucapan1 {
